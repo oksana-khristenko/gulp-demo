@@ -34,6 +34,7 @@
     "postcss-loader": "^0.8.2",
     "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
+    "postcss-reporter": "^1.4.1",
     "print": "^1.0.1",
     "require-dir": "^0.3.1",
     "vinyl-source-stream": "^1.1.0",
