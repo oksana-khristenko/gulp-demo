@@ -1,5 +1,6 @@
 var gulp   = require('gulp');
 var autoprefixer = require('autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import')();
 var postcssNested = require('postcss-nested')();
@@ -30,8 +31,10 @@ var cssTask = () => {
 
   return gulp
     .src(config.css)
+    .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions', '>5%'] }) ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('public/assets/css'));
 };
 
