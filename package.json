@@ -4,6 +4,7 @@
   "description": "Example of maintainable gulp setup",
   "author": "https://github.com/oksana-khristenko",
   "devDependencies": {
+    "autoprefixer": "^6.5.1",
     "babel-preset-es2015": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^11.2.0",

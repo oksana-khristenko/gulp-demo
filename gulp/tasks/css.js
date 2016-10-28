@@ -1,4 +1,5 @@
 var gulp   = require('gulp');
+var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import')();
 var postcssNested = require('postcss-nested')();
@@ -30,6 +31,7 @@ var cssTask = () => {
   return gulp
     .src(config.css)
     .pipe(postcss(processors))
+    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions', '>5%'] }) ]))
     .pipe(gulp.dest('public/assets/css'));
 };
 
