@@ -1,0 +1,12 @@
+/** @define SampleComponent */
+
+:root {
+  --SampleComponent-color: #999;
+}
+
+.SampleComponent {
+    color: var(--SampleComponent-color);
+    transform-origin: center bottom;
+}
+
+.SampleComponent-element {}

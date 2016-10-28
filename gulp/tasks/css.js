@@ -13,6 +13,7 @@ var postcssCustomMedia = require('postcss-custom-media');
 var postcssCustomProperties = require('postcss-custom-properties');
 var postcssCustomSelectors = require('postcss-custom-selectors');
 var postcssCalc = require('postcss-calc');
+var bemLinter = require('postcss-bem-linter');
 var config = require('../config')();
 
 var cssTask = () => {
@@ -29,6 +30,7 @@ var cssTask = () => {
     postcssCustomSelectors(),
     postcssCalc(),
     autoprefixer({ browsers: ['last 2 versions', '>5%'] }),
+    bemLinter('suit'),
     postcssReporter({clearMessages: true})
   ];
 

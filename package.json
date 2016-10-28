@@ -22,6 +22,7 @@
     "handlebars": "^4.0.5",
     "hbsfy": "^2.7.0",
     "jshint": "^2.9.4",
+    "postcss-bem-linter": "^2.6.0",
     "postcss-calc": "^5.2.1",
     "postcss-color-hexa": "^1.2.3",
     "postcss-conditionals": "^2.0.2",
