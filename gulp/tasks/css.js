@@ -30,13 +30,13 @@ var cssTask = () => {
   ];
 
   return gulp
-    .src(config.css)
+    .src(config.css.src)
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions', '>5%'] }) ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('public/assets/css'));
+    .pipe(gulp.dest(config.css.destDir));
 };
 
-gulp.task('css', cssTask);
+gulp.task('css', ['clean-css'], cssTask);
 module.exports = cssTask;
